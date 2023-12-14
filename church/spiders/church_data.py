@@ -12,7 +12,7 @@ class ChurchDataSpider(scrapy.Spider):
             url = ch.css("div.fwpl-item a::attr(href)").get()
             yield response.follow(url,self.parse_church_profile)
 
-        for i in range(2, 42):
+        for i in range(2, 3):
             yield response.follow(f"https://churches.sbc.net/?_paged={i}", self.parse)
 
     def parse_church_profile(self, response):

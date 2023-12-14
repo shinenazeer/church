@@ -11,7 +11,9 @@ BOT_NAME = "church"
 
 SPIDER_MODULES = ["church.spiders"]
 NEWSPIDER_MODULE = "church.spiders"
-
+FEEDS = {
+    'data.csv': {'format': 'csv'}
+}
 
 # Crawl responsibly by identifying yourself (and your website) on the user-agent
 #USER_AGENT = "church (+http://www.yourdomain.com)"
